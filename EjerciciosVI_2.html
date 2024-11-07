@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id = "respuesta"></h1>
+    <script>
+        
+        var tamaño=prompt("Elije un tamaño de matriz entre 5 y 10");
+
+
+        function matrizIdentidad(tamaño){
+            var matriz = [];
+
+            for(let i = 0;i<tamaño;i++){
+                matriz[i]=[];
+
+                for(let j = 0; j<tamaño;j++){
+                    if(i==j){
+                    matriz[i][j]=1;
+                    console.log(matriz[i][j]);
+                }else{
+                    matriz[i][j]=0;
+                    console.log(matriz[i][j]);
+                }
+            }
+            }return matriz;
+        }
+        if(tamaño>=5 && tamaño <=10){
+        var matriz=matrizIdentidad(tamaño);
+        for(let i = 0;i<tamaño;i++){
+        document.getElementById("respuesta").innerHTML+=matriz[i]+'<br>';
+        }
+    }else{
+        alert("El tamaño no es valido");
+    }
+    </script>
+</body>
+</html>

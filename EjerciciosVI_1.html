@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var adivinanzas= [
+                        ["Que tiene el rey en la panza","un bocadillo"],
+                        ["Oro parece plata no es","platano"],
+                        ["De que color es el caballo blanco de Santiago","blanco"]];
+
+        var azar=Math.trunc(Math.random()*3);
+        var respuesta=prompt(adivinanzas[azar][0]).toLowerCase();
+        console.log(azar);
+
+        if(respuesta==adivinanzas[azar][1]){
+            alert("Vaya eres un poirot");
+        }else{
+            alert("Noo");
+        }
+
+    </script>
+</body>
+</html>

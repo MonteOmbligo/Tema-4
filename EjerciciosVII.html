@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <!-- 
+    Pide hacerlo de forma distinta
+    <script src="temperaturas.js"></script>
+    
+    Hay que exportar e importar las funciones
+    -->
+</head>
+<body>
+    <h1 id ="resultado"></h1>
+    <!-- Importamos aqui poniendo type module-->
+    <script type="module">
+
+        import {calcularMedia,enAumento} from '/temperaturas.js';
+
+   
+    var temperaturas2020=[6.7,10.8,9.8,12.4,17.4,20.8,24.7,25.2,29.6,14.3,11.3,7];
+    var temperaturas2021=[5.9,9.2,9,11.5,16.9,20.5,24.7,25.2,20.7,15.9,8.4,9];
+    var temperaturas2022=[5.8,9,8.5,11,17.9,23.8,25.7,25.2,0,18,12.3,10.2];
+
+    document.getElementById("resultado").innerHTML+='El clima cambiático<hr>';
+
+    document.getElementById("resultado").innerHTML+='Temperatura media del año 2020: '+calcularMedia(temperaturas2020)+'º<br>';
+    document.getElementById("resultado").innerHTML+='Temperatura media del año 2021: '+calcularMedia(temperaturas2021)+'º<br>';
+    document.getElementById("resultado").innerHTML+='Temperatura media del año 2022: '+calcularMedia(temperaturas2022)+'º<hr>';
+
+    document.getElementById("resultado").innerHTML+=enAumento(temperaturas2020,temperaturas2022)? 'Es cierto que han aumentado':'No han aumentado, podría ser una falacia';
+
+
+    </script>
+</body>
+</html>

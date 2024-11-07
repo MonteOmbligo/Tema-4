@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="resultado"></h1>
+    <script>
+        function esPrimo(numero) {
+            var primo = true;
+
+            for (let i = 2; i < numero; i++) {
+                if (numero % i == 0) {
+                    primo = false;
+                }
+            }
+            return primo;
+        }
+        //Generamos 15
+        const TOTAL = 15;
+        var numAzar = [];
+        for (let i = 0; i < TOTAL; i++) {
+            numAzar[i] = Math.trunc(Math.random() * 40 + 10);
+        }
+
+        for (let i = 0; i < TOTAL; i++) {
+            var intervalo = setInterval(function () {
+                document.getElementById("resultado").innerHTML += numAzar[i] + '<br>';
+                if (i == TOTAL - 1) {
+                    clearInterval(intervalo);
+                }
+            }, 1000);
+
+        }
+        for (let i = 0; i < TOTAL; I++) {
+            if (esPrimo(numAzar[i])) {
+                document.getElementById("resultado").innerHTML += numAzar[i] + ' es primo<br>';
+            }
+        }
+    </script>
+</body>
+
+</html>

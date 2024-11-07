@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align: center;">
+
+    <h1>Numeros pares e impares</h1>
+    <img src = "paresimpares.png">
+    <h1 style="color:aquamarine" id ="pares"></h1>
+    <h1 style="color:olivedrab" id="impares"></h1>
+    <script>
+        var num=0;
+        var pares = [];
+        var impares = [];
+
+        while(num!=40){
+            num=Math.trunc(Math.random()*21+20);
+            if(num%2==0){
+                pares.push(num);
+            }else{
+                impares.push(num);
+            }
+            console.log(num);
+        }
+        pares.join(" ");
+        impares.join(" ");
+
+        document.getElementById("pares").innerHTML+='Numeros pares: '+pares.sort()+'<br>';
+        document.getElementById("impares").innerHTML+='Numeros impares: '+impares.sort((a,b) => b - a);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="EjerciciosV_2.js"></script>
+</head>
+<body>
+    <h1 id="resultado"></h1>
+    <script>
+        var lista = prompt("Dame una lista de números separados por comas '1,2,3'");
+        
+        if (sonNumeros(lista)) {
+            var numeros = aNumeros(lista);
+            document.getElementById("resultado").innerHTML += "Estaba la lista ordenada de manera ascendente: " + ordenadoAscendente(numeros);
+        } else {
+            document.getElementById("resultado").innerHTML += "Por favor introduce números separados por comas";
+        }
+    </script>
+</body>
+
+</html>
